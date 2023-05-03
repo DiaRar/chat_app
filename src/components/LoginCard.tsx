@@ -12,7 +12,7 @@ import { Label } from '@/src/components/ui/label';
 
 export function LoginCard() {
   return (
-    <Card className="w-[600px] ml-3 mr-3">
+    <Card className="w-[600px] ml-3 mr-3 customborder">
       <CardHeader>
         <CardTitle>Login / Sign Up</CardTitle>
         <CardDescription>Creaza un cont nou instant.</CardDescription>

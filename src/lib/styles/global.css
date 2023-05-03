@@ -2,7 +2,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html,
+body {
+   margin: 0;
+   padding: 0;
+}
+html {
+  height: 100vh;
+}
+.customborder {
+  border-color: white;
+}
+#root {
+  background-image: url("bg-img.jpeg");
+  background-size:cover;
+}
+body {
+  overflow-y: hidden;
+  min-height: 100%;
+}
+.h-lmao {
+  height: 95vh;
+  opacity: 0.95;
+}
+.h-lm2 {
+  position: relative;
+  height: 85%;
+}
+.customover {
+  overflow-y: hidden;
+}
 :root {
   --font-sans: 'Roboto';
   --background: 0 0% 100%;
@@ -67,6 +96,7 @@
   --ring: 216 34% 17%;
 
   --radius: 0.5rem;
+
 }
 
 @layer base {

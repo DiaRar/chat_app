@@ -15,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/src/components/ui/sheet';
+import { Button } from '@/src/components/ui/button';
 import { Label } from '@/src/components/ui/label';
 import { Input } from '@/src/components/ui/input';
 export function HomePage() {
@@ -29,7 +30,7 @@ export function HomePage() {
             <ContextMenuItem>Change Avatar</ContextMenuItem>
           </ContextMenuContent>
         </SheetTrigger>
-        <SheetContent position="right" size="sm">
+        <SheetContent position="top" size="default" className="sheet">
           <SheetHeader>
             <SheetTitle>Edit profile</SheetTitle>
             <SheetDescription>
@@ -38,19 +39,27 @@ export function HomePage() {
           </SheetHeader>
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="name" className="text-right">
-                Name
-              </Label>
-              <Input id="name" value="Bruh" className="col-span-3" />
-            </div>
-            <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="username" className="text-right">
                 Username
               </Label>
               <Input id="username" value="SuKooder" className="col-span-3" />
             </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="avatar" className="text-right">
+                Avatar
+              </Label>
+              <Input
+                id="avatar"
+                value="https://i.pravatar.cc/300"
+                className="col-span-3"
+              />
+            </div>
           </div>
-          <SheetFooter>bruh</SheetFooter>
+          <div className="save_button">
+            <SheetFooter>
+              <Button>Save</Button>
+            </SheetFooter>
+          </div>
         </SheetContent>
       </Sheet>
     </ContextMenu>

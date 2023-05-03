@@ -10,12 +10,36 @@ body {
 html {
   height: 100vh;
 }
+.sheet {
+  overflow-y: scroll;
+}
 .customborder {
   border-color: white;
 }
 #root {
   background-image: url("bg-img.jpeg");
   background-size:cover;
+}
+.message {
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  /* word-wrap: break-word;s */
+  
+}
+.content {
+  word-wrap: break-word;
+  display: inline-block;
+  width: 83%;
+}
+.username{
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.save_button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 body {
   overflow-y: hidden;

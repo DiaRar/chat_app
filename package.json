@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve --host=0.0.0.0",
+    "start": "nx serve --host=0.0.0.0 ",
+    "prod": "nx run atestat:serve:production --host=0.0.0.0",
     "build": "nx build",
     "test": "nx test"
   },
@@ -20,6 +21,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.11.0",
+    "socket.io-client": "^4.6.1",
     "tailwind-merge": "^1.12.0",
     "tailwindcss-animate": "^1.0.5"
   },

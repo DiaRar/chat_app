@@ -25,8 +25,8 @@ export function LoginCard() {
               <Input id="name" placeholder="Ex. Gigel" />
             </div>
             <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="password">Parola</Label>
-              <Input id="password" placeholder="Ex. 1234" />
+              <Label htmlFor="password">Avatar</Label>
+              <Input id="password" placeholder="Ex. un url cu o imagine" />
             </div>
           </div>
         </form>
@@ -34,8 +34,8 @@ export function LoginCard() {
       <CardFooter className="flex justify-between">
         <Button variant="ghost">Cancel</Button>
         <div>
-          <Button className="mr-3">Login</Button>
-          <Button variant="outline">Sign Up</Button>
+          {/* <Button className="mr-3">Login</Button> */}
+          <Button variant="outline">Enter</Button>
         </div>
       </CardFooter>
     </Card>

@@ -8,7 +8,7 @@ body {
    padding: 0;
 }
 html {
-  height: 100vh;
+  /* height: 100; */
 }
 .sheet {
   overflow-y: scroll;
@@ -16,9 +16,15 @@ html {
 .customborder {
   border-color: white;
 }
+/* span:has(> .h-lmao) {
+  min-height: 100%;
+  display: block;
+} */
 #root {
   background-image: url("bg-img.jpeg");
   background-size:cover;
+  /* height: 100vh; */
+  /* min-height: -webkit-fill-available; */
 }
 .message {
   display: flex;
@@ -27,10 +33,25 @@ html {
   /* word-wrap: break-word;s */
   
 }
+
+.custom {
+
+  position: relative;
+  margin: 0;
+  position: fixed;
+  width: 90%;
+  left: 50%;
+  top: 4%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
 .content {
   word-wrap: break-word;
   display: inline-block;
   width: 83%;
+}
+.customscroll {
+  flex-direction: column-reverse;
 }
 .username{
   font-weight: 900;
@@ -53,6 +74,12 @@ body {
   position: relative;
   height: 85%;
 }
+@media screen and (max-width: 600px) {
+  .h-lmao {
+    height: 80vh;
+  }
+}
+
 .customover {
   overflow-y: hidden;
 }

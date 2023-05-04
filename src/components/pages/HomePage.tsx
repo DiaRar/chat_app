@@ -4,64 +4,20 @@ import {
   ContextMenuTrigger,
   ContextMenuContent,
   ContextMenuItem,
-  ContextMenuShortcut,
 } from '@/src/components/ui/context-menu';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/src/components/ui/sheet';
-import { Button } from '@/src/components/ui/button';
-import { Label } from '@/src/components/ui/label';
-import { Input } from '@/src/components/ui/input';
 export function HomePage() {
+  const click = () => {
+    const elem = document.querySelector('#profilbruh') as HTMLElement;
+    elem.click();
+  };
   return (
     <ContextMenu>
       <ContextMenuTrigger>
         <ChatCard />
       </ContextMenuTrigger>
-      <Sheet>
-        <SheetTrigger>
-          <ContextMenuContent>
-            <ContextMenuItem>Change Avatar</ContextMenuItem>
-          </ContextMenuContent>
-        </SheetTrigger>
-        <SheetContent position="top" size="default" className="sheet">
-          <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
-            <SheetDescription>
-              Make changes to your profile here. Click save when you're done.
-            </SheetDescription>
-          </SheetHeader>
-          <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="username" className="text-right">
-                Username
-              </Label>
-              <Input id="username" value="SuKooder" className="col-span-3" />
-            </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="avatar" className="text-right">
-                Avatar
-              </Label>
-              <Input
-                id="avatar"
-                value="https://i.pravatar.cc/300"
-                className="col-span-3"
-              />
-            </div>
-          </div>
-          <div className="save_button">
-            <SheetFooter>
-              <Button>Save</Button>
-            </SheetFooter>
-          </div>
-        </SheetContent>
-      </Sheet>
+      <ContextMenuContent>
+        <ContextMenuItem onClick={click}>Edit Profile</ContextMenuItem>
+      </ContextMenuContent>
     </ContextMenu>
   );
 }
